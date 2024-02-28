@@ -60,11 +60,9 @@
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
     $(".gallery").on("click", ".mg-prev", () => {
       $.fn.mauGallery.methods.prevImage(options.lightboxId);
-      console.log("prev");
     });
     $(".gallery").on("click", ".mg-next", () => {
       $.fn.mauGallery.methods.nextImage(options.lightboxId);
-      console.log("next");
     });
   };
   $.fn.mauGallery.methods = {
@@ -144,7 +142,6 @@
       $(imagesCollection).each(function (i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
           index = --i;
-          console.log(i);
         }
       });
       next = imagesCollection[index] || imagesCollection[imagesCollection.length - 1];
